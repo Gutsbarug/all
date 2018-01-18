@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+int main(void){
+	int **a,i,h,n,w;
+	char str[1000];
+
+	fgets(str,sizeof(str),stdin);
+	w=atoi(strtok(str," "));
+	h=atoi(strtok(NULL," "));
+
+	a=(int**)malloc(sizeof(int)*h);
+	for(i=0;i<w;i++){
+		a[i]=(int*)malloc(sizeof(int)*w);
+	}
+
+	/*a‚Ì—˜—p*/
+
+
+	free(a);
+	for(i=0;i<w;i++){
+		free(a[i]);
+	}
+}
+ 
